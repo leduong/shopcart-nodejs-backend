@@ -8,6 +8,12 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    sinon: 'readonly',
+    describe: 'readonly',
+    expect: 'readonly',
+    beforeEach: 'readonly',
+    afterEach: 'readonly',
+    it: 'readonly',
   },
   parserOptions: {
     ecmaVersion: 11,
@@ -15,14 +21,6 @@ module.exports = {
   },
   rules: {
     'import/no-cycle': 'warn',
-    'padding-line-between-statements': [
-      'error',
-      {
-        blankLine: 'never',
-        prev: ['singleline-const', 'singleline-let', 'singleline-var'],
-        next: ['singleline-const', 'singleline-let', 'singleline-var'],
-      },
-    ],
   },
   ignorePatterns: ['/test/*.js', '**/node_modules/*.js'],
 };

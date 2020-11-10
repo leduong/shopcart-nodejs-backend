@@ -3,18 +3,17 @@ module.exports = {
     dialect: 'sqlite',
     storage: './sqlite.db',
     operatorsAliases: 0,
+    logging: false,
   },
   test: {
-    username: 'root',
-    password: null,
-    database: 'database_test',
-    host: '127.0.0.1',
-    dialect: 'mysql',
+    dialect: 'sqlite',
+    storage: './sqlite.db',
     operatorsAliases: 0,
   },
   production: {
     url: process.env.DATABASE_URL,
     dialect: 'postgres',
     operatorsAliases: 0,
+    logging: false,
   },
 };
